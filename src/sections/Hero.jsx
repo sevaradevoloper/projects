@@ -1,19 +1,21 @@
 
+import Button from '../components/Button.jsx'
+import HeroExperience from '../components/HeroModels/HeroExperience.jsx'
 import{words} from '../constants/index.js'
 
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero relative overflow-hidden">
+    <section id="hero" className=" relative overflow-hidden">
 
         <div className="absolute top-0 left-0 z-10">
             <img src="/images/bg.png" alt="background" />
         </div>
-        <div className="hero__layout">
+        <div className="hero-layout">
             {/* left hero  */}
-            <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+            <header className="flex flex-col justify-center  md:w-full w-screen md:px-20 px-5">
                 <div className="flex flex-col gap-7">
-                    <div className="hero__text">
+                    <div className="hero-text">
                         <h1>Shaping
                             <span className="slide"> 
                                 <span className="wrapper">
@@ -28,11 +30,23 @@ const Hero = () => {
                         </h1>
                         <h1>into Real Projects</h1>
                         <h1>that Deliver Results</h1>
+                        <p>Hi, I’m Sevara, a developer based in Uzbekistan with a passion for code.</p>
+                        <Button
+                        className ="md:w-80 md:h-16 w-60 h-12"
+                         id="button"
+                         text="See my Work"
+                        />
+
                     </div>
                 </div>
             </header>
            
             {/* right hero */}
+            <figure>
+                <div className="hero-3d-layout ">
+                <HeroExperience/>
+                </div>
+            </figure>
         </div>
 
     </section>
